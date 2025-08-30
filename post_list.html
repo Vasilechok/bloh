@@ -1,0 +1,6 @@
+<h1>Список постів</h1>
+<ul>
+  {% for post in posts %}
+    <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a> (Автор: {{ post.author.name }})</li>
+  {% endfor %}
+</ul>
